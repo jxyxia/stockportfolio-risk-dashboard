@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE = "http://localhost:8000";
+const API_BASE = "https://risk-dashboard-api-kue0.onrender.com";
 
 function extractErrorMessage(err: unknown): string {
   if (axios.isAxiosError(err) && err.response?.data?.detail) {

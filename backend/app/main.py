@@ -6,7 +6,7 @@ app = FastAPI(title="Risk Dashboard API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["*"],  # temporary, will lock down after Vercel deploy
     allow_methods=["*"],
     allow_headers=["*"],
 )
