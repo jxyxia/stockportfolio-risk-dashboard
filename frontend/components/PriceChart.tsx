@@ -32,7 +32,7 @@ export default function PriceChart({ data, tickers }: Props) {
               fontFamily: "var(--font-mono)",
             }}
             labelStyle={{ color: "#8B92A5" }}
-            formatter={(value: number | string, name: string) => [`$${Number(value).toFixed(2)}`, name]}
+            formatter={(value, name) => [`$${Number(value ?? 0).toFixed(2)}`, name as string]}
           />
           <Legend wrapperStyle={{ fontSize: "12px", fontFamily: "var(--font-sans)" }} />
           {tickers.map((ticker, i) => (
