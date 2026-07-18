@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base: #0a0e14;
+  --color-surface: #12161f;
+  --color-border: #1c2230;
+  --color-gold: #d4a857;
+  --color-positive: #4ade80;
+  --color-negative: #f87171;
+  --color-muted: #8b92a5;
+
+  --font-sans: var(--font-inter), sans-serif;
+  --font-mono: var(--font-mono), monospace;
+}
+
+body {
+  background-color: var(--color-base);
+  color: #e8e9ed;
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-count-up {
+  animation: countUp 0.4s ease-out;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
